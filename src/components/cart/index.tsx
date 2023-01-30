@@ -23,6 +23,7 @@ const CartList = ({ items }: { items: CartType[] }) => {
         allChecked;
     }
   };
+
   return (
     <form ref={formRef} onChange={handleCheckboxChanged}>
       <label>

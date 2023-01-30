@@ -81,6 +81,8 @@ const CartItem = (
     deleteCart({ id });
   };
 
+  console.log("cartitem rerender", title);
+
   return (
     <li className="cart-item">
       <input
