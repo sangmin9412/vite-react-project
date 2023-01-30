@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import CartCount from "./cart/count";
 
 const Gnb = () => {
+  const location = useLocation();
+  
   return (
     <nav className="gnb">
       <ul>
@@ -13,6 +16,9 @@ const Gnb = () => {
         <li>
           <Link to={`/cart`}>장바구니</Link>
         </li>
+        {
+          location.pathname === "/cart" ? <CartCount /> : null
+        }
       </ul>
     </nav>
   );
